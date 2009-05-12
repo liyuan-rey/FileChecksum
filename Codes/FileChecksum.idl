@@ -1,0 +1,40 @@
+// FileChecksum.idl : IDL source for FileChecksum.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FileChecksum.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(B974ACA6-B145-4017-90BA-DCA2E2CD68B8),
+		dual,
+		helpstring("IChecksum Interface"),
+		pointer_default(unique)
+	]
+	interface IChecksum : IDispatch
+	{
+	};
+
+[
+	uuid(BEFC8A44-20E0-4F14-8693-9F618C119767),
+	version(1.0),
+	helpstring("FileChecksum 1.0 Type Library")
+]
+library FILECHECKSUMLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(4E51DE8C-07AB-49E4-B151-21B0A1B6AB41),
+		helpstring("Checksum Class")
+	]
+	coclass Checksum
+	{
+		[default] interface IChecksum;
+	};
+};

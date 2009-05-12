@@ -1,0 +1,37 @@
+HKCR
+{
+	FileChecksum.Checksum.1 = s 'Checksum Class'
+	{
+		CLSID = s '{4E51DE8C-07AB-49E4-B151-21B0A1B6AB41}'
+	}
+	FileChecksum.Checksum = s 'Checksum Class'
+	{
+		CLSID = s '{4E51DE8C-07AB-49E4-B151-21B0A1B6AB41}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4E51DE8C-07AB-49E4-B151-21B0A1B6AB41} = s 'Checksum Class'
+		{
+			ProgID = s 'FileChecksum.Checksum.1'
+			VersionIndependentProgID = s 'FileChecksum.Checksum'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
+
+HKCR
+{
+    NoRemove exefile
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove Checksum = s '{4E51DE8C-07AB-49E4-B151-21B0A1B6AB41}'
+            }
+        }
+    }
+}

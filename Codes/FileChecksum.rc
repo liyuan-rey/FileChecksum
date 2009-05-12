@@ -1,0 +1,266 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""FileChecksum.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "FileChecksum Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "FileChecksum\0"
+            VALUE "LegalCopyright", "Copyright 2001\0"
+            VALUE "OriginalFilename", "FileChecksum.DLL\0"
+            VALUE "ProductName", "FileChecksum Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_Checksum            REGISTRY DISCARDABLE    "Checksum.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_SETTING DIALOGEX 0, 0, 236, 158
+STYLE WS_CHILD | WS_DISABLED
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_FILENAME,72,7,157,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_ADDRESS,72,23,157,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_CURRENTSUM,72,39,69,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_CURRENTVALUE,160,39,69,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_CHECKSUM,72,55,69,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_CHECKVALUE,160,55,69,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    CONTROL         "不作改动",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,17,85,48,10
+    CONTROL         "直接写入计算校验和",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,17,100,88,10
+    CONTROL         "写入自定义值",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,17,115,64,10
+    EDITTEXT        IDC_CUSTOM,30,129,67,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "操作前备份原文件",IDC_BACKUP,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,143,100,80,10
+    EDITTEXT        IDC_PREVIEW,154,129,69,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    RTEXT           "目标文件",IDC_STATIC,31,7,33,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    RTEXT           "当前校验和",IDC_STATIC,23,39,41,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    RTEXT           "校验和偏移地址",IDC_STATIC,7,23,57,12,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    RTEXT           "值",IDC_STATIC,144,39,12,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    RTEXT           "计算校验和",IDC_STATIC,23,55,41,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    RTEXT           "值",IDC_STATIC,144,55,12,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    GROUPBOX        " 操 作 ",IDC_STATIC,7,72,222,79
+    LTEXT           "写入值预览",IDC_STATIC,109,129,41,12,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+END
+
+IDD_PROPPAGE_INFO DIALOGEX 0, 0, 235, 156
+STYLE WS_CHILD | WS_DISABLED
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "操作成功完成!",IDC_STATIC,7,7,221,18,SS_CENTERIMAGE
+    EDITTEXT        IDC_ERRINFO,7,35,221,114,ES_MULTILINE | ES_READONLY | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_PROPPAGE_ABOUT DIALOGEX 0, 0, 235, 156
+STYLE WS_CHILD | WS_DISABLED
+FONT 9, "宋体"
+BEGIN
+    CTEXT           "iYi Software Express",IDC_STATIC,73,118,89,31,
+                    SS_CENTERIMAGE | SS_SUNKEN
+    EDITTEXT        IDC_HELPTEXT,7,7,221,96,ES_MULTILINE | ES_READONLY | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_DIALOG_MAIN DIALOG DISCARDABLE  0, 0, 245, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Checksum"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ | SS_SUNKEN,6,187,
+                    234,1
+    CONTROL         "",IDC_PLACEHOLDER,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,5,29,235,156
+    CONTROL         202,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN,43,5,158,16
+    PUSHBUTTON      "下一步(&N)",IDOK,184,196,50,14
+    PUSHBUTTON      "上一步(&P)",IDC_PREV,124,196,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ | SS_SUNKEN,6,27,
+                    234,1
+    PUSHBUTTON      "帮助(&H)",IDHELP,11,196,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PROPPAGE_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_PROPPAGE_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_PROPPAGE_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 240
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 210
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BANNER              BITMAP  DISCARDABLE     "res\\checksum.BMP"
+IDI_MENUBMP             BITMAP  DISCARDABLE     "res\\idi_menu.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "FileChecksum"
+    IDS_CHECKSUM_DESC       "Checksum Class"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "FileChecksum.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
