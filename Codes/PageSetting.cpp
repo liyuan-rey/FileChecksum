@@ -37,7 +37,7 @@ CPageSetting::~CPageSetting()
 {
 }
 
-void CPageSetting::DoDataExchange(CDataExchange* pDX)
+void CPageSetting::DoDataExchange(CDataExchange *pDX)
 {
 	CPropertyPage::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CPageSetting)
@@ -54,72 +54,71 @@ void CPageSetting::DoDataExchange(CDataExchange* pDX)
 	//}}AFX_DATA_MAP
 }
 
-
 BEGIN_MESSAGE_MAP(CPageSetting, CPropertyPage)
-	//{{AFX_MSG_MAP(CPageSetting)
-	ON_BN_CLICKED(IDC_RADIO1, OnRadio1)
-	ON_BN_CLICKED(IDC_RADIO2, OnRadio2)
-	ON_BN_CLICKED(IDC_RADIO3, OnRadio3)
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CPageSetting)
+ON_BN_CLICKED(IDC_RADIO1, OnRadio1)
+ON_BN_CLICKED(IDC_RADIO2, OnRadio2)
+ON_BN_CLICKED(IDC_RADIO3, OnRadio3)
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CPageSetting message handlers
 
-BOOL CPageSetting::OnInitDialog() 
+BOOL CPageSetting::OnInitDialog()
 {
-	m_szFileName = ((CDlgMain*)GetParent())->GetFile();
+	m_szFileName = ((CDlgMain *)GetParent())->GetFile();
 	DWORD dwRet = MapFileAndCheckSum(m_szFileName.GetBuffer(0), &m_dwCurrentValue, &m_dwCheckValue);
 
-	switch(dwRet)
+	switch (dwRet)
 	{
 	case CHECKSUM_SUCCESS:
 		m_szAddress = _T("0x0000E5D8");
 		break;
 
 	case CHECKSUM_OPEN_FAILURE:
-		m_szAddress = _T("错误:无法打开文件!");
+		m_szAddress = _T("閿欒:鏃犳硶鎵撳紑鏂囦欢!");
 		break;
 
 	case CHECKSUM_MAP_FAILURE:
-		m_szAddress = _T("错误:无法映射文件!");
+		m_szAddress = _T("閿欒:鏃犳硶鏄犲皠鏂囦欢!");
 		break;
 
 	case CHECKSUM_MAPVIEW_FAILURE:
-		m_szAddress = _T("错误:无法映射文件的视!");
+		m_szAddress = _T("閿欒:鏃犳硶鏄犲皠鏂囦欢鐨勮!");
 		break;
 
 	case CHECKSUM_UNICODE_FAILURE:
-		m_szAddress = _T("错误:无法转换文件名为 Unicode !");
+		m_szAddress = _T("閿欒:鏃犳硶杞崲鏂囦欢鍚嶄负 Unicode !");
 		break;
 
 	default:
-		m_szAddress = _T("错误:未知错误!");
+		m_szAddress = _T("閿欒:鏈煡閿欒!");
 	}
 
 	m_szFileName.ReleaseBuffer();
 
 	CPropertyPage::OnInitDialog();
-	
+
 	// TODO: Add extra initialization here
-	
-	return TRUE;  // return TRUE unless you set the focus to a control
-	              // EXCEPTION: OCX Property Pages should return FALSE
+
+	return TRUE; // return TRUE unless you set the focus to a control
+				 // EXCEPTION: OCX Property Pages should return FALSE
 }
 
-void CPageSetting::OnRadio1() 
+void CPageSetting::OnRadio1()
 {
 	// TODO: Add your control notification handler code here
 	Switch();
 }
 
-void CPageSetting::OnRadio2() 
+void CPageSetting::OnRadio2()
 {
 	// TODO: Add your control notification handler code here
 	Switch();
 }
 
-void CPageSetting::OnRadio3() 
+void CPageSetting::OnRadio3()
 {
 	// TODO: Add your control notification handler code here
 	Switch();
@@ -129,11 +128,11 @@ void CPageSetting::Switch()
 {
 	int nPreValue = m_nOperation;
 	UpdateData(TRUE);
-	if(m_nOperation == nPreValue)
+	if (m_nOperation == nPreValue)
 		return;
 
-	m_btnBackup.EnableWindow( m_nOperation  ? TRUE : FALSE );
-	m_edtCustom.EnableWindow( m_nOperation == 2 ? TRUE : FALSE );
+	m_btnBackup.EnableWindow(m_nOperation ? TRUE : FALSE);
+	m_edtCustom.EnableWindow(m_nOperation == 2 ? TRUE : FALSE);
 
 	UpdateData(FALSE);
 }

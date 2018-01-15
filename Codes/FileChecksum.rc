@@ -104,7 +104,7 @@ IDR_Checksum            REGISTRY DISCARDABLE    "Checksum.rgs"
 
 IDD_PROPPAGE_SETTING DIALOGEX 0, 0, 236, 158
 STYLE WS_CHILD | WS_DISABLED
-FONT 9, "ÀŒÃÂ"
+FONT 9, "ÂÆã‰Ωì"
 BEGIN
     EDITTEXT        IDC_FILENAME,72,7,157,12,ES_AUTOHSCROLL | ES_READONLY | 
                     NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
@@ -120,47 +120,47 @@ BEGIN
     EDITTEXT        IDC_CHECKVALUE,160,55,69,12,ES_AUTOHSCROLL | ES_READONLY | 
                     ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
                     WS_EX_STATICEDGE
-    CONTROL         "≤ª◊˜∏ƒ∂Ø",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+    CONTROL         "‰∏ç‰ΩúÊîπÂä®",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
                     WS_GROUP | WS_TABSTOP,17,85,48,10
-    CONTROL         "÷±Ω”–¥»Îº∆À„–£—È∫Õ",IDC_RADIO2,"Button",
+    CONTROL         "Áõ¥Êé•ÂÜôÂÖ•ËÆ°ÁÆóÊ†°È™åÂíå",IDC_RADIO2,"Button",
                     BS_AUTORADIOBUTTON | WS_TABSTOP,17,100,88,10
-    CONTROL         "–¥»Î◊‘∂®“Â÷µ",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+    CONTROL         "ÂÜôÂÖ•Ëá™ÂÆö‰πâÂÄº",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
                     WS_TABSTOP,17,115,64,10
     EDITTEXT        IDC_CUSTOM,30,129,67,12,ES_AUTOHSCROLL | ES_NUMBER | 
                     WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
-    CONTROL         "≤Ÿ◊˜«∞±∏∑›‘≠Œƒº˛",IDC_BACKUP,"Button",BS_AUTOCHECKBOX | 
+    CONTROL         "Êìç‰ΩúÂâçÂ§á‰ªΩÂéüÊñá‰ª∂",IDC_BACKUP,"Button",BS_AUTOCHECKBOX | 
                     WS_DISABLED | WS_TABSTOP,143,100,80,10
     EDITTEXT        IDC_PREVIEW,154,129,69,12,ES_AUTOHSCROLL | ES_READONLY | 
                     NOT WS_BORDER,WS_EX_STATICEDGE
-    RTEXT           "ƒø±ÍŒƒº˛",IDC_STATIC,31,7,33,12,SS_CENTERIMAGE | NOT 
+    RTEXT           "ÁõÆÊ†áÊñá‰ª∂",IDC_STATIC,31,7,33,12,SS_CENTERIMAGE | NOT 
                     WS_GROUP
-    RTEXT           "µ±«∞–£—È∫Õ",IDC_STATIC,23,39,41,12,SS_CENTERIMAGE | NOT 
+    RTEXT           "ÂΩìÂâçÊ†°È™åÂíå",IDC_STATIC,23,39,41,12,SS_CENTERIMAGE | NOT 
                     WS_GROUP
-    RTEXT           "–£—È∫Õ∆´“∆µÿ÷∑",IDC_STATIC,7,23,57,12,SS_CENTERIMAGE | 
+    RTEXT           "Ê†°È™åÂíåÂÅèÁßªÂú∞ÂùÄ",IDC_STATIC,7,23,57,12,SS_CENTERIMAGE | 
                     NOT WS_GROUP
-    RTEXT           "÷µ",IDC_STATIC,144,39,12,12,SS_CENTERIMAGE | NOT 
+    RTEXT           "ÂÄº",IDC_STATIC,144,39,12,12,SS_CENTERIMAGE | NOT 
                     WS_GROUP
-    RTEXT           "º∆À„–£—È∫Õ",IDC_STATIC,23,55,41,12,SS_CENTERIMAGE | NOT 
+    RTEXT           "ËÆ°ÁÆóÊ†°È™åÂíå",IDC_STATIC,23,55,41,12,SS_CENTERIMAGE | NOT 
                     WS_GROUP
-    RTEXT           "÷µ",IDC_STATIC,144,55,12,12,SS_CENTERIMAGE | NOT 
+    RTEXT           "ÂÄº",IDC_STATIC,144,55,12,12,SS_CENTERIMAGE | NOT 
                     WS_GROUP
-    GROUPBOX        " ≤Ÿ ◊˜ ",IDC_STATIC,7,72,222,79
-    LTEXT           "–¥»Î÷µ‘§¿¿",IDC_STATIC,109,129,41,12,SS_CENTERIMAGE | 
+    GROUPBOX        " Êìç ‰Ωú ",IDC_STATIC,7,72,222,79
+    LTEXT           "ÂÜôÂÖ•ÂÄºÈ¢ÑËßà",IDC_STATIC,109,129,41,12,SS_CENTERIMAGE | 
                     NOT WS_GROUP
 END
 
 IDD_PROPPAGE_INFO DIALOGEX 0, 0, 235, 156
 STYLE WS_CHILD | WS_DISABLED
-FONT 9, "ÀŒÃÂ"
+FONT 9, "ÂÆã‰Ωì"
 BEGIN
-    LTEXT           "≤Ÿ◊˜≥…π¶ÕÍ≥…!",IDC_STATIC,7,7,221,18,SS_CENTERIMAGE
+    LTEXT           "Êìç‰ΩúÊàêÂäüÂÆåÊàê!",IDC_STATIC,7,7,221,18,SS_CENTERIMAGE
     EDITTEXT        IDC_ERRINFO,7,35,221,114,ES_MULTILINE | ES_READONLY | 
                     NOT WS_BORDER,WS_EX_STATICEDGE
 END
 
 IDD_PROPPAGE_ABOUT DIALOGEX 0, 0, 235, 156
 STYLE WS_CHILD | WS_DISABLED
-FONT 9, "ÀŒÃÂ"
+FONT 9, "ÂÆã‰Ωì"
 BEGIN
     CTEXT           "iYi Software Express",IDC_STATIC,73,118,89,31,
                     SS_CENTERIMAGE | SS_SUNKEN
@@ -171,7 +171,7 @@ END
 IDD_DIALOG_MAIN DIALOG DISCARDABLE  0, 0, 245, 215
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "Checksum"
-FONT 9, "ÀŒÃÂ"
+FONT 9, "ÂÆã‰Ωì"
 BEGIN
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ | SS_SUNKEN,6,187,
                     234,1
@@ -179,11 +179,11 @@ BEGIN
                     WS_VISIBLE,5,29,235,156
     CONTROL         202,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
                     SS_SUNKEN,43,5,158,16
-    PUSHBUTTON      "œ¬“ª≤Ω(&N)",IDOK,184,196,50,14
-    PUSHBUTTON      "…œ“ª≤Ω(&P)",IDC_PREV,124,196,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "‰∏ã‰∏ÄÊ≠•(&N)",IDOK,184,196,50,14
+    PUSHBUTTON      "‰∏ä‰∏ÄÊ≠•(&P)",IDC_PREV,124,196,50,14,NOT WS_VISIBLE
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ | SS_SUNKEN,6,27,
                     234,1
-    PUSHBUTTON      "∞Ô÷˙(&H)",IDHELP,11,196,50,14
+    PUSHBUTTON      "Â∏ÆÂä©(&H)",IDHELP,11,196,50,14
 END
 
 
